@@ -1,0 +1,55 @@
+.container {
+  h2, h3 {
+    text-align: center;
+  }
+
+  .empty {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .biography {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .border {
+    border: 1px solid black;
+
+    .inputField {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      input {
+        font-size: 24px;
+        padding: 5px;
+      }
+    }
+
+    ul {
+      li {
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .infoConteiner {
+      display: flex;
+      margin-bottom: 20px;
+      padding: 0 10px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+
+        span:not(:last-of-type) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

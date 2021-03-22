@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto; }
+  .container ul {
+    padding: 0;
+    margin: 0; }
+    .container ul li {
+      list-style: none;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 22px; }
+      .container ul li:not(:last-of-type) {
+        border-bottom: 1px solid #000; }
+      .container ul li:first-of-type {
+        border-top: 1px solid #000; }
+
+.column {
+  width: 40%; }
