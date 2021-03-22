@@ -1,19 +1,12 @@
 import { useState } from 'react';
 import c from './users.module.scss';
 
-const token = 'd7b88b96be90c389327e8cf8df148745e44b0ef1';
-
 function Users({ setUser }) {
   const [users, setUsers] = useState([]);
   const [value, setValue] = useState("")
 
   const getUsers = (url) => {
-    fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Token ${token}`
-      }
-    })
+    fetch(url)
       .then(res => {
         if (res.status < 400) {
           return res.json()
@@ -25,12 +18,7 @@ function Users({ setUser }) {
   }
 
   const getUser = (url) => {
-    fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Token ${token}`
-      }
-    })
+    fetch(url)
       .then(res => {
         if (res.status < 400) {
           return res.json()

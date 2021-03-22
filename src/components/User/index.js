@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import c from './user.module.scss';
 
-const token = 'd7b88b96be90c389327e8cf8df148745e44b0ef1';
-
 function User({ user }) {
   const [value, setValue] = useState("");
   const [repos, setRepos] = useState([]);
@@ -15,12 +13,7 @@ function User({ user }) {
   );
 
   const getRepos = (url) => {
-    fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `token ${token}`
-      }
-    })
+    fetch(url)
       .then(res => {
         if (res.status < 400) {
           return res.json()
