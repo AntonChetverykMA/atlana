@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import c from './user.module.scss';
 
-const token = 'aa2eb7a56d0de03b83e93cf4feee5ba9fdbd6483';
+const token = 'ca6d57c375ca0212968214ecc239be7eda2fc3dc';
 
 function User({ user }) {
   const [value, setValue] = useState("");

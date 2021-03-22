@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import c from './users.module.scss';
 
-const token = 'aa2eb7a56d0de03b83e93cf4feee5ba9fdbd6483';
+const token = 'ca6d57c375ca0212968214ecc239be7eda2fc3dc';
 
 function Users({ setUser }) {
   const [users, setUsers] = useState([]);
@@ -28,7 +28,7 @@ function Users({ setUser }) {
     fetch(url, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `token ${token}`
+        'Authorization': `Token ${token}`
       }
     })
       .then(res => {
@@ -42,7 +42,9 @@ function Users({ setUser }) {
   }
 
   const onClick = () => {
-    getUsers(`https://api.github.com/search/users?q=${value}`)
+    if (value) {
+      getUsers(`https://api.github.com/search/users?q=${value}`);
+    }
   }
 
   const onChange = (e) => {
